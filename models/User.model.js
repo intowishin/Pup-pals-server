@@ -4,13 +4,11 @@ const { Schema, model } = require("mongoose");
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
   {
-    name: {
-      type: String,
-      unique: true
-    },
+    email: { type: String, unique: true },
     password: String,
+    name: String,
     age: Number,
-    gender: {type: String, enum: ["Male", "Female"]},
+    gender: { type: String, enum: ["Male", "Female"] },
     about: String,
     // dog: [MyObjectId]
   },
